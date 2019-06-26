@@ -1,0 +1,10 @@
+---
+
+- name: jf.php | setup-debian | install packages
+  apt: pkg={{ item }} state=present update_cache=yes
+  with_items:
+   - php7.2
+   - php7.2-fpm
+   - php7.2-common
+   - php7.2-cli
+   - php7.2-gd
